@@ -356,6 +356,51 @@
         margin: 0;
       }
 
+      /* ---------- Team: CEO feature + function grid ---------- */
+      .ceo {
+        display: grid;
+        grid-template-columns: 1.05fr 1fr;
+        gap: 44px;
+        border: 1px solid var(--line);
+        background: var(--surface);
+        padding: 42px 44px;
+        margin-bottom: 26px;
+      }
+      .ceo .c-cat {
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin: 0 0 10px;
+      }
+      .ceo-name {
+        font-size: clamp(1.9rem, 3.6vw, 2.7rem);
+        font-weight: 900;
+        letter-spacing: -0.015em;
+        line-height: 1.05;
+        margin: 0 0 10px;
+      }
+      .ceo-note {
+        color: var(--muted);
+        font-size: 1.03rem;
+        line-height: 1.7;
+        margin: 0;
+        align-self: center;
+      }
+      .ceo-note strong { color: var(--ink); }
+      .roster.team-grid { grid-template-columns: repeat(2, 1fr); }
+      .client .c-desc {
+        color: var(--muted);
+        font-size: 0.98rem;
+        line-height: 1.65;
+        margin: 10px 0 0;
+      }
+      @media (max-width: 760px) {
+        .ceo { grid-template-columns: 1fr; padding: 32px 28px; }
+        .roster.team-grid { grid-template-columns: 1fr; }
+      }
+
       /* ---------- CTA ---------- */
       .cta { background: var(--panel); color: var(--panel-ink); }
       .cta-inner { padding: 88px 0; max-width: 780px; }
@@ -679,43 +724,62 @@
       <section class="block" id="team">
         <div class="wrap">
           <div class="section-head">
-            <p class="kicker">Core roster</p>
-            <h2>Who you&rsquo;d actually <em>work with.</em></h2>
+            <p class="kicker">The team</p>
+            <h2>The heart behind it. <em>The team that delivers it.</em></h2>
             <p>
-              No bait-and-switch. The seniors who pitch the strategic concept are the
-              craftspeople in the room directing the execution.
+              Every WOW moment is held to one standard &mdash; Owolabi Emmanuel&rsquo;s.
+              He is at the centre of the work, and around him stands the team that turns
+              that standard into rooms, reveals and headlines.
             </p>
           </div>
-          <div class="roster">
-            <div class="client">
-              <p class="c-cat">Leadership</p>
-              <p class="c-name">Maren Osei</p>
-              <p class="p-role">Founder &amp; CEO</p>
+
+          <div class="ceo">
+            <div>
+              <p class="c-cat">Chief Executive Officer</p>
+              <p class="ceo-name">Owolabi Emmanuel</p>
+              <p class="p-role">The heart of WOW</p>
             </div>
+            <p class="ceo-note">
+              Owolabi sets the rhythm this agency works to: <strong>no lukewarm
+              executions, no handoffs, no moment shipped until it would move him
+              first.</strong> Clients feel it as a single point of conviction &mdash; one
+              person who knows their brief, their audience, and exactly what reaction
+              they are paying for.
+            </p>
+          </div>
+
+          <div class="roster team-grid">
             <div class="client">
-              <p class="c-cat">Strategy</p>
-              <p class="c-name">Theo Lindqvist</p>
-              <p class="p-role">Head of Agency &amp; PR</p>
+              <p class="c-cat">Agency</p>
+              <p class="c-name">Strategy &amp; PR</p>
+              <p class="c-desc">
+                The planners and publicists who turn commercial objectives into
+                positioning, press and stories people repeat.
+              </p>
             </div>
             <div class="client">
               <p class="c-cat">Experiential</p>
-              <p class="c-name">Akenu Micheal</p>
-              <p class="p-role">Head of Surprises</p>
+              <p class="c-name">Experience &amp; Production</p>
+              <p class="c-desc">
+                The producers and craftspeople who build the room, the reveal and the
+                moment itself &mdash; and run it on the day.
+              </p>
             </div>
             <div class="client">
-              <p class="c-cat">Philanthropy</p>
-              <p class="c-name">John Adams</p>
-              <p class="p-role">Head of Impact</p>
+              <p class="c-cat">Surprises</p>
+              <p class="c-name">Gifting &amp; Curation</p>
+              <p class="c-desc">
+                The curators who source, finish and time every gift so it lands as a
+                genuine surprise, never a line item.
+              </p>
             </div>
             <div class="client">
-              <p class="c-cat">Execution</p>
-              <p class="c-name">Elsa Otorkpa</p>
-              <p class="p-role">Head of Production</p>
-            </div>
-            <div class="client">
-              <p class="c-cat">Partnerships</p>
-              <p class="c-name">Dembe Okoro</p>
-              <p class="p-role">Client Partner</p>
+              <p class="c-cat">Impact</p>
+              <p class="c-name">Charity &amp; Partnerships</p>
+              <p class="c-desc">
+                The people behind the drives and announcements &mdash; and the client
+                relationships that hold every brief together.
+              </p>
             </div>
           </div>
         </div>
